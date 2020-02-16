@@ -33,7 +33,7 @@ class WorkWeixinNotificationPlugin(NotificationPlugin):
         """
         return bool(self.get_option('key', project))
 
-    def notify(self, notification):
+    def notify(self, notification, raise_exception=False):
         event = notification.event
         group = event.group
         project = group.project
