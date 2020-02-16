@@ -57,7 +57,7 @@ class WorkWeixinNotificationPlugin(NotificationPlugin):
                     title=event.title,
                     tag=the_tags,
                     message=event.message,
-                    url=u"{}events/{}/".format(group.get_absolute_url(), event.id),
+                    url=u"{}events/{}/".format(group.get_absolute_url(), event.event_id),
                 )
             }
         }
