@@ -52,11 +52,10 @@ class WorkWeixinNotificationPlugin(NotificationPlugin):
         values = {
             "msgtype": "markdown",
             "markdown": {
-                "content": u"**[{project_name}] {tag[level]}: {title}**\n```{message}```\n[查看详情]({url})".format(
+                "content": u"[{project_name}] {tag[level]}: {title}\n[查看详情]({url})".format(
                     project_name=project.name,
                     title=event.title,
                     tag=the_tags,
-                    message=event.message,
                     url=u"{}events/{}/".format(group.get_absolute_url(), event.event_id),
                 )
             }
